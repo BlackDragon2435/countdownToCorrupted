@@ -1,0 +1,62 @@
+/* Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    background: url('https://images.unsplash.com/photo-1564577324-f1b6b8adac25?fit=crop&w=500&h=500') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Faster One', cursive;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Centered Timer Box */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Timer Styling */
+.timer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 40px;
+    font-size: 4rem;
+    font-family: 'Rock Salt', cursive;
+    color: #e60000;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Spooky Glow Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 0, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 0, 0, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 0, 0, 0.7);
+    }
+}
+
+/* Timer Text Styling */
+#timer {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3), 0px 0px 25px rgba(255, 0, 0, 0.9);
+}
