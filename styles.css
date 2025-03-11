@@ -10,7 +10,7 @@ body {
     background: url('https://images.unsplash.com/photo-1564577324-f1b6b8adac25?fit=crop&w=500&h=500') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Faster One', cursive;
-    color: white;
+    color: rgb(0, 0, 0);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@ body {
     font-size: 4rem;
     font-family: 'Rock Salt', cursive;
     color: #e60000;
-    border: 5px solid #ffffff;
+    border: 5px solid #00ff1e;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     animation: pulse 1.5s infinite ease-in-out;
 }

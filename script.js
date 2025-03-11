@@ -3,10 +3,10 @@ function updateCountdown() {
     const now = new Date();
 
     // Set target date to the 20th of the current month
-    let targetDate = new Date(now.getFullYear(), now.getMonth(), 20);
+    let targetDate = new Date(now.getFullYear(), now.getMonth(), 28);
 
     // If today is past the 20th, set the target date to the 20th of next month
-    if (now.getDate() > 20) {
+    if (now.getDate() > 28) {
         targetDate.setMonth(targetDate.getMonth() + 1);
     }
 
