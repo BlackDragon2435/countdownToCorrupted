@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units Battlegrounds Hall of Fame</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1a1a1a, #333);
+            color: white;
+            overflow-x: hidden;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            z-index: 1000;
+        }
+        .tab-button {
+            background: none;
+            border: 2px solid white;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 8px;
+        }
+        .tab-button:hover {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            display: none;
+            padding: 80px 20px 20px;
+            min-height: 100vh;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h1 {
+            margin-top: 80px;
+            font-size: 2.5em;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 200px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+        .secret-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .secret-overlay img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="glow">Units Battlegrounds Hall of Fame</h1>
+    <nav>
+        <button class="tab-button" onclick="showTab('units')">Famed Units</button>
+        <button class="tab-button" onclick="showTab('players')">Famed Players</button>
+        <button class="tab-button" onclick="showTab('memes')">Favorite Memes</button>
+        <button class="tab-button" onclick="showTab('ash')">Time Ash Went Crazy</button>
+        <button class="tab-button" onclick="showTab('luna')">Luna Breakin the Bank</button>
+		<button class="tab-button" onclick="showTab('JAMS')">Community Requested Jams</button>
+    </nav>
+    
+    <div id="units" class="content active">
+        <h2>Famed Units</h2>
+        <p><!-- Add your famed units content here --></p>
+        <div class="image-container">
+            <img src="your-image1.jpg" alt="Unit 1" onclick="revealSecret()">
+        </div>
+    </div>
+    <div id="players" class="content">
+        <h2>Famed Players</h2>
+        <p><!-- Add your famed players content here --></p>
+        <div class="image-container">
+            <img src="your-image2.jpg" alt="Player 1">
+        </div>
+    </div>
+    <div id="memes" class="content">
+        <h2>Favorite Memes</h2>
+        <p><!-- Add your favorite memes content here --></p>
+        <div class="image-container">
+            <img src="your-image3.jpg" alt="Meme 1">
+        </div>
+    </div>
+    <div id="ash" class="content">
+        <h2>Time Ash Went Crazy</h2>
+        <p><!-- Add your "Ash Went Crazy" moments here --></p>
+        <div class="image-container">
+            <img src="your-image4.jpg" alt="Ash Moment">
+        </div>
+    </div>
+    <div id="luna" class="content">
+        <h2>Luna Breakin the Bank</h2>
+        <p><!-- Add your "Luna Breakin the Bank" content here --></p>
+        <div class="image-container">
+            <img src="your-image5.jpg" alt="Luna Moment">
+        </div>
+    </div>
+	<div id="JAMS" class="content">
+        <h2>Community Jams</h2>
+        <p><!-- why was i asked to include this --></p>
+        <div class="image-container">
+            <iframe width="1236" height="695" src="https://www.youtube.com/embed/Cn-ywvP8roI" title="OIIA Cat x Gangnam Style (PSY Remix)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+			
+        </div>
+		<div>
+		<iframe width="1236" height="695" src="https://www.youtube.com/embed/xvFZjo5PgG0" title="Rick Roll (Different link + no ads)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+		</div>
+    </div>
+
+    <div class="secret-overlay" id="secretOverlay" onclick="hideSecret()">
+        <img src="secret-image.jpg" alt="Secret Image">
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function revealSecret() {
+            document.getElementById('secretOverlay').style.display = 'flex';
+        }
+
+        function hideSecret() {
+            document.getElementById('secretOverlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
